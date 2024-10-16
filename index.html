@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Typing Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>speedometer</h1>
+  <div class="container">
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <h1>Welcome to Speed Typing Test</h1>
+
+      <!-- Username Input Section -->
+      <div id="username-area">
+        <input type="text" id="username" placeholder="Enter your username" class="input-username">
+        <button id="start-game" class="btn-start">Start Your Game</button>
+      </div>
+    </div>
+
+    <!-- Game Main Section -->
+    <div id="game-area" class="hidden">
+      <h2 id="display-username"></h2>
+      <div class="info">
+        <button id="countdown" class="btn-timer">60s</button>
+        <h3 id="wpm">Words per minute: 0</h3>
+      </div>
+      
+      <div class="typing-area">
+        <h3 id="random-sentence" class="sentence"></h3>
+        <textarea id="user-input" class="text-input" placeholder="Start typing here..."></textarea>
+      </div>
+    </div>
+
+    <!-- Game End -->
+    <!-- <div id="game-over" class="hidden">
+      <h2>Time's up!</h2>
+      <h3 id="final-wpm">Your final WPM: </h3>
+      <button id="restart" class="btn-start">Take the Test Again</button>
+    </div>
+  </div> -->
+  <div id="scoreboard" class="hidden">
+    <h2 id="try-again" class="hidden">Try Again!</h2>
+    <h2 id="level-completed">Level 1 Completed!</h2>
+    <p>Username: <span id="scoreboard-username"></span></p>
+    <p>Correct sentence: <span id="scoreboard-correct-words"></span></p>
+    <p>Total Time: <span id="scoreboard-time"></span></p>
+    <button id="next-level" class="hidden">Next Level</button>
+    <button id="restart">Restart Game</button>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
